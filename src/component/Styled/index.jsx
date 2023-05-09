@@ -1,10 +1,23 @@
-import styled from "styled-components";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 *{
     margin: 0;
 }
+`;
+
+export const Typography = styled.div`
+  color: ${(props) =>
+    props.color ? props.theme.colors[props.color] : props.theme.colors.black};
+  font-size: ${(props) => props.fontSize || "10px"};
+
+  ${(props) => props.title && props.theme.font.title};
+  ${(props) => props.subtitle && props.theme.font.subtitle};
+  ${(props) => props.titleButton && props.theme.font.titleButton};
+  ${(props) => props.cardText && props.theme.font.cardText};
+  ${(props) => props.cardButton && props.theme.font.cardButton};
+  ${(props) => props.timeText && props.theme.font.timeText};
+  ${(props) => props.footerText && props.theme.font.footerText};
 `;
 
 export const TextBox = styled.div`

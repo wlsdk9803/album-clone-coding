@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { TextBox, Button } from "../Styled";
+import { TextBox, Button, Typography } from "../Styled";
 
 const PageWrapper = styled.div`
   height: 260px;
@@ -14,9 +14,9 @@ const PageWrapper = styled.div`
 const PageExplain = (props) => {
   return (
     <PageWrapper>
-      <TextBox color="#474747" fontWeight="lighter" fontSize="40px">
+      <Typography Title color="#474747">
         {props.title}
-      </TextBox>
+      </Typography>
 
       <TextBox color="rgb(135, 135, 135)" fontWeight="lighter" fontSize="20px">
         {props.children}
