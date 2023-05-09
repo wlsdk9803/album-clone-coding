@@ -39,7 +39,7 @@ const font = {
 
 const colors = {
   black: "#000000",
-  gray: "gray",
+  gray: "#808080",
   deepgray: "#6c757d",
   darkgray: "#61666b",
   white: "#ffffff",
