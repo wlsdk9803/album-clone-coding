@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { TextBox, Button, Typography } from "../Styled";
+import { Typography } from "../Styled/Styled";
 
 const PageWrapper = styled.div`
   height: 260px;
@@ -11,54 +11,60 @@ const PageWrapper = styled.div`
   line-height: 1.5;
 `;
 
+const TitleButton = styled.button`
+  height: 37px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 15px 5px 15px;
+  font-size: 1rem;
+  float: center;
+  margin: 2px;
+  cursor: pointer;
+  background-color: ${(props) => props.theme.colors[props.backgroundColor]};
+  &:hover {
+    background: ${(props) => props.theme.colors[props.hoverBackgroundColor]};
+  }
+  &:focus {
+    outline: ${(props) => props.focusOutline || "none"};
+  }
+`;
+
 const PageExplain = (props) => {
   return (
     <PageWrapper>
-      <Typography Title color="#474747">
+      <Typography Title color="lightblack">
         {props.title}
       </Typography>
 
-      <TextBox color="rgb(135, 135, 135)" fontWeight="lighter" fontSize="20px">
+      <Typography Subtitle color="lightgray">
         {props.children}
-      </TextBox>
+      </Typography>
 
       <br />
       <Link to="/">
-        <Button
-          height="37px"
-          backgroundColor="#007bff"
-          color="white"
-          padding="5px 15px 5px 15px"
-          fontSize="1rem"
-          float="center"
-          hoverBackgroundColor="#2766e4"
-          hoverColor="white"
+        <TitleButton
+          backgroundColor="lightblue"
+          hoverBackgroundColor="deepblue"
           focusOutline="3.5px solid rgba(55, 144, 222, .5)"
           onClick={() => {
             window.scrollTo({ top: 0 });
           }}
         >
           Main call to action
-        </Button>
+        </TitleButton>
       </Link>
       <Link to="/">
-        <Button
-          height="37px"
-          backgroundColor="#6c757d"
-          color="white"
-          padding="5px 15px 5px 15px"
-          marginLeft="5px"
-          fontSize="1rem"
-          float="center"
-          hoverBackgroundColor="#61666b"
-          hoverColor="white"
+        <TitleButton
+          backgroundColor="deepgray"
+          hoverBackgroundColor="darkgray"
           focusOutline="3.5px solid rgba(140, 140, 140, .5)"
           onClick={() => {
             window.scrollTo({ top: 0 });
           }}
         >
           Secondary action
-        </Button>
+        </TitleButton>
       </Link>
     </PageWrapper>
   );

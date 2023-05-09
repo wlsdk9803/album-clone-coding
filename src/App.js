@@ -1,8 +1,8 @@
-import Top from "./component/Top";
-import PageExplain from "./component/PageExplain";
-import ImageCard from "./component/ImageCard";
-import Bottom from "./component/Bottom";
-import { Background, GlobalStyle, Footer } from "./component/Styled";
+import Top from "./component/Top/Top";
+import PageExplain from "./component/PageExplain/PageExplain";
+import ImageCard from "./component/ImageCard/ImageCard";
+import Bottom from "./component/Bottom/Bottom";
+import { Background, GlobalStyle, Footer } from "./component/Styled/Styled";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       </PageExplain>
 
       <Background>
-        <ImageCard image="img/계담다.jpg" time="20 mins" fontSize="13px">
+        <ImageCard image="img/계담다.jpg" time="20 mins" fontSize="12px">
           연남동 계담다! <br />
           혹시 여기 아시는 분 계신가요??
           <br />
@@ -26,7 +26,7 @@ function App() {
           가봐야 할 맛집입니다...❤
         </ImageCard>
 
-        <ImageCard image="img/플러버1.png" time="15 mins" fontSize="13px">
+        <ImageCard image="img/플러버1.png" time="15 mins" fontSize="12px">
           카페인줄 알았다고요?
           <br />
           무려 식당입니다...!
@@ -35,7 +35,7 @@ function App() {
           &emsp;(음식 사진👉)
         </ImageCard>
 
-        <ImageCard image="img/플러버2.png" time="9 mins" fontSize="11px">
+        <ImageCard image="img/플러버2.png" time="9 mins" fontSize="10.5px">
           음식도 맛있습니다...! <br />
           양도 아주 푸짐해서 대책 없이 많이 시켰다간 정말 많이 남기고 올 수도
           있으니 주의! <br />
@@ -51,7 +51,7 @@ function App() {
           피자 좋아하시면 한번 가보세요!
         </ImageCard>
 
-        <ImageCard image="img/크레이지카츠.png" time="5 mins" fontSize="13px">
+        <ImageCard image="img/크레이지카츠.png" time="5 mins" fontSize="12px">
           돈까스 좋아하시는 분들이라면 꼭 가봐야 할 곳...
           <br />
           합정 크레이지카츠입니다! <br />
@@ -73,7 +73,7 @@ function App() {
           여기 가면 꼭 크림피넛초코를 드셔보세요!
         </ImageCard>
 
-        <ImageCard image="img/팔덕식당.png" time="1 mins" fontSize="11px">
+        <ImageCard image="img/팔덕식당.png" time="1 mins" fontSize="10.5px">
           설마 아직까지 팔덕식당 안가본 분 계세요...? <br />
           등갈비찜 맛집으로 유명한 곳인데 설마 없을거라고 믿습니다...
           <br />
@@ -81,7 +81,7 @@ function App() {
           (지역별로 있는데 신촌 지점은 상호명이 '담산'으로 바뀌었다고 합니다.)
         </ImageCard>
 
-        <ImageCard image="img/까치화방.png" time="30 sec" fontSize="13px">
+        <ImageCard image="img/까치화방.png" time="30 sec" fontSize="12px">
           여긴 일단 인테리어가 미쳤습니다... <br />
           가면 그냥 힐링되는 곳! <br />
           감성 카페에 미쳐있는 분들 꼭 가보세요. <br />
